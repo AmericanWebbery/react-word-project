@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+h1 {
+  font-size: 3rem;
+}
+p {
+  font-size: 3rem;
+}
+.word {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: plum;
+}
