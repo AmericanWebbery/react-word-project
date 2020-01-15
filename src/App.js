@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+require("dotenv").config();
 
 function App() {
-  const WORD_API_KEY = "ZHO35KTY";
-  const WORD_API = `https://random-word-api.herokuapp.com/word?key=${WORD_API_KEY}&number=1`;
+  // add your own API keys in an .env file
+  const WORD_API_KEY = process.env.REACT_APP_WORD_API;
+  const WORD_API = `https://random-word-api.herokuapp.com/word?key=${process.env.REACT_APP_WORD_API}&number=1`;
 
   const [word, setWord] = useState("");
 
