@@ -5,23 +5,19 @@ require("dotenv").config();
 function App() {
   // add your own API keys in an .env file
   const WORD_API_KEY = process.env.REACT_APP_WORD_API;
-  const WORD_API = `https://random-word-api.herokuapp.com/word?key=${process.env.REACT_APP_WORD_API}&number=1`;
+  const WORD_API = `https://random-word-api.herokuapp.com/word?key=${WORD_API_KEY}&number=1`;
 
   const [word, setWord] = useState("");
 
-  const FETCH_WORD = () => {
-    fetch(WORD_API)
-      .then(response => {
-        return response.json();
-      })
-      .then(response => setWord(response));
+  const FETCH_WORD = async () => {
+    const res = await fetch(WORD_API);
+    const json = await res.json();
+    setWord(json);
   };
 
   useEffect(() => {
     FETCH_WORD();
   }, []);
-
-  console.log(word);
 
   return (
     <div className="App">
