@@ -6,15 +6,30 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
 }
+#root {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+}
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 p {
-  font-size: 3rem;
+  font-size: 2.2rem;
 }
 .word {
   color: red;
   font-weight: bold;
   text-decoration: underline;
-  text-decoration-color: plum;
+  text-decoration-color: rgb(252, 239, 252);
+}
+button {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: green;
+  color: #fff;
+  padding: 15px 35px;
+  font-size: 22px;
+  margin-left: 10px;
 }
